@@ -26,7 +26,7 @@
 <link href='css/YTPlayer.css' rel='stylesheet' type="text/css">
 
 <!-- GOOGLE FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
