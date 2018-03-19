@@ -325,7 +325,7 @@
 		margin: 0;
 		height: auto;
 		width: 100%;
-		padding-top: 100px;
+		padding-top: 40px;
 	}
 	
 	#mobile-menu ul {
@@ -422,7 +422,11 @@
 	.switch-menu {
 		display: block;
 	}
-	
+	.open-menu {
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+	}
 	.quoter {
 		text-align: center;
 		padding-left: 0px;
