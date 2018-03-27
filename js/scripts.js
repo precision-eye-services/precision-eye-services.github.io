@@ -3,12 +3,12 @@ jQuery(function ($) {
 	$(document).ready(function () {
 
 		// LOADER 
-		$('body').jpreLoader({
+		// $('body').jpreLoader({
 
-			showSplash: false,
-			autoClose: true,
+		// 	showSplash: false,
+		// 	autoClose: true,
 
-		});
+		// });
 
 		// VIDEO SETUP
 		jQuery('.player').mb_YTPlayer();
