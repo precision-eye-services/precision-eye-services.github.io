@@ -1169,7 +1169,11 @@ header.sticky:hover {
 		cursor: pointer;
 	}
 	
-
+	.response-message:not(:empty) {
+		margin: 1rem 0 0;
+		text-align: center;
+		font-weight: bold;
+	}
 
 .ui-accordion .ui-accordion-header {
 	padding: 10px 0;

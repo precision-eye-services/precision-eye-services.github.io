@@ -128,18 +128,14 @@
     	 	952-426-7000<br/>
     	 	844-426-3937 (EYES)<br/>
 			</div>
-			<form method="post" class="contact-form" action="verify.php">
-				<input type="text" name="name" placeholder="Insert your name" class="required">
-				<input type="text" name="pname" placeholder="Insert your practice name" class="required">
-				<input type="email" name="email" placeholder="Insert your email address" class="required">
-				<input type="phone" name="phone" placeholder="(XXX) XXX-XXXX" class="required">
-				<textarea name="message" placeholder="Insert your message" class="required"></textarea>
-				
-				<input class="check" type="checkbox" name="contact"> <div class="checktext">Yes, I would like someone to contact me with information about Precision Eye Services.<br/><br/></div>
-				
-				<input class="check" type="checkbox" name="subscribe"> <div class="checktext">Yes, I would like to receive company news and updates from Precision Eye Services.</div>
-				<!--<p>
-				<input type="text" name="check" placeholder="Are you human? 4+5?" class="required"></p>-->
+			<form method="post" class="contact-form" action="">
+				<input type="text" id="name" name="name" placeholder="Insert your name" class="required">
+				<input type="text" id="pname" name="pname" placeholder="Insert your practice name" class="required">
+				<input type="email" id="email" name="email" placeholder="Insert your email address" class="required">
+				<input type="phone" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" class="required">
+				<textarea id="message" name="message" placeholder="Insert your message" class="required"></textarea>
+				<input class="check" type="checkbox" id="contact" name="contact"> <div class="checktext">Yes, I would like someone to contact me with information about Precision Eye Services.<br/><br/></div>
+				<input class="check" type="checkbox" id="subscribe" name="subscribe"> <div class="checktext">Yes, I would like to receive company news and updates from Precision Eye Services.</div>
 				<div class="response-message"></div>
 				<input type="submit" id="sender" value="Submit" name="submit" class="float-right">
 				<div class="clear"></div>
@@ -286,7 +282,7 @@
 
 <script type="text/javascript" src="/js/plugins.js"></script> 
 
-<script type="text/javascript" src="/js/scripts-no-loader.js"></script> 
+<script type="text/javascript" src="/js/scripts.js"></script> 
 
 </body>
 

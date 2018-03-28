@@ -395,3 +395,67 @@ jQuery(function ($) {
 
 	});
 });
+
+window.addEventListener('DOMContentLoaded', function() {
+	if(document.querySelector('.contact-form') !== null) {
+		document.querySelector('.contact-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			var name = e.target.querySelector('#name').value.trim();
+			var pname = e.target.querySelector('#pname').value.trim();
+			var phone = e.target.querySelector('#phone').value.trim();
+			var email = e.target.querySelector('#email').value.toLowerCase().trim();
+			var message = e.target.querySelector('#message').value;
+			var contact = e.target.querySelector('#contact').checked;
+			var subscribe,
+				contact_zepto,
+				contact_miloop;
+
+			if(e.target.querySelector('#subscribe') !== null)
+				subscribe = e.target.querySelector('#subscribe').checked;
+			else if(e.target.querySelector('#contact_zepto') !== null)
+				contact_zepto = e.target.querySelector('#contact_zepto').checked;
+			else if(e.target.querySelector('#contact_miloop') !== null)
+				contact_miloop = e.target.querySelector('#contact_miloop').checked;
+
+			var post_data = {
+				'subject': 'Contact Form Request',
+				'from_name': name,
+				'email': 'info@precisioneye.net',
+				'email_from': email,
+				'message': '<h2>Contact Form Request</h2><table width="400px">\
+				<tr><td width="25%"><strong>Name</strong></td><td width="75%">' + name + '</td></tr>\
+				<tr><td width="25%"><strong>Practice Name</strong></td><td width="75%">' + pname + '</td></tr>\
+				<tr><td width="25%"><strong>Email Address</strong></td><td width="75%">' + email + '</td></tr>\
+				<tr><td width="25%"><strong>Phone Number</strong></td><td width="75%">' + phone + '</td></tr>\
+				<tr><td width="25%"><strong>Message</strong></td><td width="75%">' + message + '</td></tr>'
+			};
+			if(contact)
+				post_data.message += '<tr><td width="25%"><strong>Contact</strong></td><td width="75%"><strong>Yes</strong>, I would like someone to contact me with information about Precision Eye Services.</td></tr>';
+			if(subscribe)
+				post_data.message += '<tr><td width="25%"><strong>Subscribe</strong></td><td width="75%"><strong>Yes</strong>, I would like to receive company news and updates from Precision Eye Services.</td></tr>';
+			else if(contact_zepto)
+				post_data.message += '<tr><td width="25%"><strong>Zepto</strong></td><td width="75%"><strong>Yes</strong>, I would like someone to contact me with information about Zepto.</td></tr>';
+			else if(contact_miloop)
+				post_data.message += '<tr><td width="25%"><strong>miLoop</strong></td><td width="75%"><strong>Yes</strong>, I would like someone to contact me with information about miLOOP&trade;.</td></tr>';
+			 post_data.message += '</table>';
+
+
+			 document.querySelector('.contact-form .response-message').textContent = '';
+			//Ajax post data to server
+			jQuery.ajax({
+				type: 'POST',
+				url: 'https://danmoe.systems/email/precisioneye',
+				data: post_data,
+				dataType: 'json',
+				complete: function(res) {
+					if(res.status === 200 || res.status === 201) {
+						document.querySelector('.contact-form .response-message').textContent = 'Success! We have received your request and will reach out shortly.';
+					} else {
+						document.querySelector('.contact-form .response-message').textContent = 'We encountered an error while processing your request. Please try again later.';
+					}
+				}
+			});
+		});
+	}
+});
