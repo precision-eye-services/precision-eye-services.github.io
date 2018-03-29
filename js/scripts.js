@@ -115,25 +115,25 @@ jQuery(function ($) {
 		});
 
 		// CHANGE PAGE
-		$('a').click(function (event) {
-			if(event.target.target !== '_blank') {
-				var href = $(this).attr('href');
-				var curtain = $(this).data('curtain');
+		// $('a').click(function (event) {
+		// 	if(event.target.target !== '_blank') {
+		// 		var href = $(this).attr('href');
+		// 		var curtain = $(this).data('curtain');
 	
-				if (href != undefined && href != '#' && !$(this).hasClass('lightbox') && curtain != false) {
-					event.preventDefault();
+		// 		if (href != undefined && href != '#' && !$(this).hasClass('lightbox') && curtain != false) {
+		// 			event.preventDefault();
 	
-					$('#curtain').animate({ width: "100%" }, 500, 'easeOutQuint');
+		// 			$('#curtain').animate({ width: "100%" }, 500, 'easeOutQuint');
 	
-					var demoColor = GetURLParameter('color');
-					if (demoColor) {
-						setTimeout(function () { window.location.replace(href + '?color=' + demoColor); }, 1000);
-					} else {
-						setTimeout(function () { window.location.replace(href); }, 1000);
-					}
-				}
-			}
-		});
+		// 			var demoColor = GetURLParameter('color');
+		// 			if (demoColor) {
+		// 				setTimeout(function () { window.location.replace(href + '?color=' + demoColor); }, 1000);
+		// 			} else {
+		// 				setTimeout(function () { window.location.replace(href); }, 1000);
+		// 			}
+		// 		}
+		// 	}
+		// });
 
 
 		/* SCROLL TO SECTIONS */
