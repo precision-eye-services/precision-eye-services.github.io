@@ -423,7 +423,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			var post_data = {
 				'subject': 'Contact Form Request',
 				'from_name': name,
-				'email': 'info@precisioneye.net',
+				'email': 'dhaeder@precisioneye.net',
 				'email_from': email,
 				'message': '<h2>Contact Form Request</h2><table width="400px">\
 				<tr><td width="25%"><strong>Name</strong></td><td width="75%">' + name + '</td></tr>\
