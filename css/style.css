@@ -500,6 +500,7 @@ header.sticky:hover {
     text-transform: uppercase;
 	list-style: none;
 	text-indent: inherit;
+    z-index: 1;
 }
 
 	.header-clear .main-menu li {
@@ -565,6 +566,7 @@ header.sticky:hover {
 		left: 0;
 		width: 100%;
 		padding-top: 30px;
+		z-index: -1;
 	}
 		
 	.sub-menu li {
