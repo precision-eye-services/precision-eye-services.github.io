@@ -63,7 +63,6 @@
 						<a href="/products.html">Products</a>
 						<ul class="sub-menu">
 							<li><a href="/products-zepto.html">Zepto</a></li>
-							<li><a href="/products-miloop.html">miLoop</a></li>
 						</ul>
 					</li>
 					<li class="menu-item-parent">
@@ -102,7 +101,6 @@
 					<a href="/products.html">Products</a>
 					<ul class="sub-menu">
 						<li><a href="/products-zepto.html">Zepto</a></li>
-						<li><a href="/products-miloop.html">miLoop</a></li>
 					</ul>
 				</li>
 				<li class="menu-item-parent">
